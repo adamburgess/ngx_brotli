@@ -136,8 +136,8 @@ static ngx_int_t check_accept_encoding(ngx_http_request_t* req) {
 static ngx_int_t check_eligility(ngx_http_request_t* req) {
   if (req != req->main) return NGX_DECLINED;
   if (check_accept_encoding(req) != NGX_OK) return NGX_DECLINED;
-  req->gzip_tested = 1;
-  req->gzip_ok = 0;
+  //req->gzip_tested = 1;
+  //req->gzip_ok = 0;
   return NGX_OK;
 }
 
